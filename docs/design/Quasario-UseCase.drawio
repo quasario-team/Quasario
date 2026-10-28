@@ -1,0 +1,910 @@
+<mxfile host="Electron">
+  <diagram name="Use Case" id="uc">
+    <mxGraphModel dx="702" dy="523" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="6862" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sys" parent="1" style="rounded=1;arcSize=2;whiteSpace=wrap;verticalAlign=top;fontStyle=1;fontSize=18;fillColor=#f7fafc;strokeColor=#37474f;strokeWidth=2;" value=" " vertex="1">
+          <mxGeometry height="6742" width="950" x="300" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="band_V" parent="1" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=#e3f2fd;opacity=45;strokeColor=#e3f2fd;align=right;verticalAlign=top;fontStyle=1;fontSize=15;fontColor=#455a64;spacingRight=14;spacingTop=4;" value="حالات الزائر" vertex="1">
+          <mxGeometry height="998" width="926" x="312" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="band_U" parent="1" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=#fff3e0;opacity=45;strokeColor=#fff3e0;align=right;verticalAlign=top;fontStyle=1;fontSize=15;fontColor=#455a64;spacingRight=14;spacingTop=4;" value="حالات المستخدم" vertex="1">
+          <mxGeometry height="3198" width="926" x="312" y="1157" as="geometry" />
+        </mxCell>
+        <mxCell id="band_EV" parent="1" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=#e0f2f1;opacity=45;strokeColor=#e0f2f1;align=right;verticalAlign=top;fontStyle=1;fontSize=15;fontColor=#455a64;spacingRight=14;spacingTop=4;" value="حالات المستخدم الموثّق" vertex="1">
+          <mxGeometry height="577" width="926" x="312" y="4340" as="geometry" />
+        </mxCell>
+        <mxCell id="band_AD" parent="1" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=#fce4ec;opacity=45;strokeColor=#fce4ec;align=right;verticalAlign=top;fontStyle=1;fontSize=15;fontColor=#455a64;spacingRight=14;spacingTop=4;" value="حالات المسؤول" vertex="1">
+          <mxGeometry height="1812" width="926" x="312" y="4955" as="geometry" />
+        </mxCell>
+        <mxCell id="visitor" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;whiteSpace=wrap;fontStyle=1;fontSize=13;" value="الزائر" vertex="1">
+          <mxGeometry height="104" width="40" x="100" y="525" as="geometry" />
+        </mxCell>
+        <mxCell id="user" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;whiteSpace=wrap;fontStyle=1;fontSize=13;" value="المستخدم" vertex="1">
+          <mxGeometry height="104" width="40" x="100" y="2306" as="geometry" />
+        </mxCell>
+        <mxCell id="admin" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;whiteSpace=wrap;fontStyle=1;fontSize=13;" value="المسؤول (Admin)" vertex="1">
+          <mxGeometry height="104" width="40" x="100" y="5645" as="geometry" />
+        </mxCell>
+        <mxCell id="verified" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;whiteSpace=wrap;fontStyle=1;fontSize=13;" value="المستخدم الموثّق&#10;(لديه شارة التوثيق ✔)" vertex="1">
+          <mxGeometry height="104" width="40" x="100" y="4601" as="geometry" />
+        </mxCell>
+        <mxCell id="ext_ai" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede7f6;strokeColor=#4527a0;fontColor=#311b92;fontStyle=1;fontSize=13;" value="«system»&#10;خدمة الذكاء الاصطناعي&#10;(AI API)" vertex="1">
+          <mxGeometry height="76" width="190" x="1385" y="616" as="geometry" />
+        </mxCell>
+        <mxCell id="ext_map" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede7f6;strokeColor=#4527a0;fontColor=#311b92;fontStyle=1;fontSize=13;" value="«system»&#10;خدمة الخرائط&#10;(Maps API)" vertex="1">
+          <mxGeometry height="76" width="190" x="1385" y="439" as="geometry" />
+        </mxCell>
+        <mxCell id="home" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#455a64;fontSize=13;" value="تصفّح الصفحة الرئيسية" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="123" as="geometry" />
+        </mxCell>
+        <mxCell id="f_city" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#455a64;fontSize=13;" value="التصفية حسب المدينة" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="f_job" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#455a64;fontSize=13;" value="التصفية حسب المهنة" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="234" as="geometry" />
+        </mxCell>
+        <mxCell id="search" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#455a64;fontSize=13;" value="البحث عن صفحة" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="197" as="geometry" />
+        </mxCell>
+        <mxCell id="map_page" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#455a64;fontSize=13;" value="استعراض الخريطة التفاعلية" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="loc_detail" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#455a64;fontSize=13;" value="عرض تفاصيل موقع الصفحة" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="419" as="geometry" />
+        </mxCell>
+        <mxCell id="ai_loc" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#455a64;fontSize=13;" value="تحديد الموقع" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="493" as="geometry" />
+        </mxCell>
+        <mxCell id="ai_suggest" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#455a64;fontSize=13;" value="اقتراح مقدمي الخدمة المناسبين" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="567" as="geometry" />
+        </mxCell>
+        <mxCell id="ai" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#455a64;fontSize=13;" value="سؤال المساعد الذكي (AI)" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="493" as="geometry" />
+        </mxCell>
+        <mxCell id="ev_search" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#455a64;fontSize=13;" value="البحث عن فعالية بالاسم" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="641" as="geometry" />
+        </mxCell>
+        <mxCell id="ev_fcity" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#455a64;fontSize=13;" value="تصفية الفعاليات حسب المدينة" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="715" as="geometry" />
+        </mxCell>
+        <mxCell id="events" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#455a64;fontSize=13;" value="تصفّح الفعاليات" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="678" as="geometry" />
+        </mxCell>
+        <mxCell id="ev_map" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#455a64;fontSize=13;" value="عرض موقع الفعالية على الخريطة" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="789" as="geometry" />
+        </mxCell>
+        <mxCell id="ev_detail" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#455a64;fontSize=13;" value="عرض تفاصيل فعالية" vertex="1">
+          <mxGeometry height="89" width="250" x="355" y="754" as="geometry" />
+        </mxCell>
+        <mxCell id="view_photo" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#455a64;fontSize=13;" value="عرض صورة من المعرض" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="863" as="geometry" />
+        </mxCell>
+        <mxCell id="end_gal" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#455a64;fontSize=13;" value="عرض صور أعمال التقييم" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="937" as="geometry" />
+        </mxCell>
+        <mxCell id="view_end" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#455a64;fontSize=13;" value="عرض تقييم موثّق في صفحة" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="937" as="geometry" />
+        </mxCell>
+        <mxCell id="view" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#455a64;fontSize=13;" value="عرض صفحة" vertex="1">
+          <mxGeometry height="146" width="250" x="355" y="1011" as="geometry" />
+        </mxCell>
+        <mxCell id="save" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="حفظ صفحة في المفضلة" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="1195" as="geometry" />
+        </mxCell>
+        <mxCell id="rep_page" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="تبليغ عن صفحة" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="1269" as="geometry" />
+        </mxCell>
+        <mxCell id="attach" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#455a64;fontSize=13;" value="إرفاق ملف بالرسالة" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="1306" as="geometry" />
+        </mxCell>
+        <mxCell id="n_msg" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff59d;strokeColor=#455a64;fontSize=13;" value="إرسال إشعار رسالة جديدة" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="1380" as="geometry" />
+        </mxCell>
+        <mxCell id="chat" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="إرسال رسالة" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="1343" as="geometry" />
+        </mxCell>
+        <mxCell id="view_chats" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="استعراض المحادثات" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="1417" as="geometry" />
+        </mxCell>
+        <mxCell id="rep_ev" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="تبليغ عن فعالية" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="1565" as="geometry" />
+        </mxCell>
+        <mxCell id="rep_post" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="تبليغ عن منشور" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="1639" as="geometry" />
+        </mxCell>
+        <mxCell id="register" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="إنشاء حساب" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="1713" as="geometry" />
+        </mxCell>
+        <mxCell id="profile" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="تعديل الملف الشخصي" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="1787" as="geometry" />
+        </mxCell>
+        <mxCell id="view_saved" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="استعراض الصفحات المحفوظة" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="1861" as="geometry" />
+        </mxCell>
+        <mxCell id="unsave" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="إزالة صفحة من المفضلة" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="1935" as="geometry" />
+        </mxCell>
+        <mxCell id="view_inv" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="استعراض دعوات الانضمام لأقسام" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="2009" as="geometry" />
+        </mxCell>
+        <mxCell id="notif" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="استعراض الإشعارات" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="2083" as="geometry" />
+        </mxCell>
+        <mxCell id="n_inv_ok" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff59d;strokeColor=#455a64;fontSize=13;" value="إرسال إشعار قبول الدعوة" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="2157" as="geometry" />
+        </mxCell>
+        <mxCell id="acc_inv" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="قبول دعوة انضمام لقسم" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="2157" as="geometry" />
+        </mxCell>
+        <mxCell id="n_inv_no" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff59d;strokeColor=#455a64;fontSize=13;" value="إرسال إشعار رفض الدعوة" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="2231" as="geometry" />
+        </mxCell>
+        <mxCell id="rej_inv" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="رفض دعوة انضمام لقسم" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="2231" as="geometry" />
+        </mxCell>
+        <mxCell id="verify" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="طلب شارة التوثيق" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="2305" as="geometry" />
+        </mxCell>
+        <mxCell id="n_end_req" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff59d;strokeColor=#455a64;fontSize=13;" value="إرسال إشعار طلب التقييم" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="2453" as="geometry" />
+        </mxCell>
+        <mxCell id="endorse" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="طلب تقييم موثّق" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="2379" as="geometry" />
+        </mxCell>
+        <mxCell id="view_end_req" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="استعراض طلبات التقييم الواردة" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="2453" as="geometry" />
+        </mxCell>
+        <mxCell id="n_end_ok" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff59d;strokeColor=#455a64;fontSize=13;" value="إرسال إشعار قبول التقييم" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="2675" as="geometry" />
+        </mxCell>
+        <mxCell id="acc_end" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="قبول طلب تقييم" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="2601" as="geometry" />
+        </mxCell>
+        <mxCell id="req_gal" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#455a64;fontSize=13;" value="عرض صور الأعمال المرفقة بالطلب" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="2749" as="geometry" />
+        </mxCell>
+        <mxCell id="n_end_no" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff59d;strokeColor=#455a64;fontSize=13;" value="إرسال إشعار رفض التقييم" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="2823" as="geometry" />
+        </mxCell>
+        <mxCell id="rej_end" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="رفض طلب تقييم" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="2786" as="geometry" />
+        </mxCell>
+        <mxCell id="n_end_del" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff59d;strokeColor=#455a64;fontSize=13;" value="إرسال إشعار حذف التقييم" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="2897" as="geometry" />
+        </mxCell>
+        <mxCell id="del_end" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="حذف تقييم من صفحتي" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="2897" as="geometry" />
+        </mxCell>
+        <mxCell id="add_photo" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="إضافة صورة إلى المعرض" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="2971" as="geometry" />
+        </mxCell>
+        <mxCell id="del_photo" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="حذف صورة من المعرض" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="3045" as="geometry" />
+        </mxCell>
+        <mxCell id="add_link" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="إضافة رابط تواصل اجتماعي" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="3119" as="geometry" />
+        </mxCell>
+        <mxCell id="del_link" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="حذف رابط تواصل اجتماعي" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="3193" as="geometry" />
+        </mxCell>
+        <mxCell id="pick_map" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#455a64;fontSize=13;" value="تحديد المكان على الخريطة التفاعلية" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="3378" as="geometry" />
+        </mxCell>
+        <mxCell id="set_loc" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="تحديد موقع الصفحة" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="3267" as="geometry" />
+        </mxCell>
+        <mxCell id="edit_loc" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="تعديل موقع الصفحة" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="3341" as="geometry" />
+        </mxCell>
+        <mxCell id="new_sec_m" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="إنشاء قسم أعضاء" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="3526" as="geometry" />
+        </mxCell>
+        <mxCell id="new_sec_i" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="إنشاء قسم معلومات" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="3600" as="geometry" />
+        </mxCell>
+        <mxCell id="edit_sec" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="تعديل قسم" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="3674" as="geometry" />
+        </mxCell>
+        <mxCell id="n_del_sec" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff59d;strokeColor=#455a64;fontSize=13;" value="إرسال إشعار حذف القسم" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="3748" as="geometry" />
+        </mxCell>
+        <mxCell id="del_sec" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="حذف قسم" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="3748" as="geometry" />
+        </mxCell>
+        <mxCell id="n_leave_sec" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff59d;strokeColor=#455a64;fontSize=13;" value="إرسال إشعار مغادرة القسم" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="3822" as="geometry" />
+        </mxCell>
+        <mxCell id="leave_sec" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="مغادرة قسم" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="3822" as="geometry" />
+        </mxCell>
+        <mxCell id="find_member" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#455a64;fontSize=13;" value="البحث عن عضو" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="3896" as="geometry" />
+        </mxCell>
+        <mxCell id="n_inv" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff59d;strokeColor=#455a64;fontSize=13;" value="إرسال إشعار دعوة الانضمام" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="3970" as="geometry" />
+        </mxCell>
+        <mxCell id="invite" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="دعوة عضو إلى قسم" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="3933" as="geometry" />
+        </mxCell>
+        <mxCell id="n_rm" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff59d;strokeColor=#455a64;fontSize=13;" value="إرسال إشعار الإزالة من القسم" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="4044" as="geometry" />
+        </mxCell>
+        <mxCell id="rm_member" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="إزالة عضو من قسم" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="4044" as="geometry" />
+        </mxCell>
+        <mxCell id="logout" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="تسجيل الخروج" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="4118" as="geometry" />
+        </mxCell>
+        <mxCell id="reset_pw" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#455a64;fontSize=13;" value="استعادة كلمة المرور" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="4192" as="geometry" />
+        </mxCell>
+        <mxCell id="login" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="تسجيل الدخول" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="4192" as="geometry" />
+        </mxCell>
+        <mxCell id="del_acc" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;" value="حذف الحساب" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="4266" as="geometry" />
+        </mxCell>
+        <mxCell id="my_ev" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e0f2f1;strokeColor=#455a64;fontSize=13;" value="استعراض فعالياتي" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="4400" as="geometry" />
+        </mxCell>
+        <mxCell id="ev_photos" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#455a64;fontSize=13;" value="إضافة منشور" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="4548" as="geometry" />
+        </mxCell>
+        <mxCell id="ev_loc" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#455a64;fontSize=13;" value="تحديد موقع الفعالية على الخريطة" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="4622" as="geometry" />
+        </mxCell>
+        <mxCell id="new_ev" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e0f2f1;strokeColor=#455a64;fontSize=13;" value="إنشاء فعالية" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="4474" as="geometry" />
+        </mxCell>
+        <mxCell id="e_post" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#455a64;fontSize=13;" value="إضافة منشور جديد" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="4807" as="geometry" />
+        </mxCell>
+        <mxCell id="e_loc" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#455a64;fontSize=13;" value="تعديل موقع الفعالية على الخريطة" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="4881" as="geometry" />
+        </mxCell>
+        <mxCell id="edit_ev" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e0f2f1;strokeColor=#455a64;fontSize=13;" value="تعديل فعالية" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="4696" as="geometry" />
+        </mxCell>
+        <mxCell id="del_ev" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e0f2f1;strokeColor=#455a64;fontSize=13;" value="حذف فعالية" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="4770" as="geometry" />
+        </mxCell>
+        <mxCell id="del_post" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e0f2f1;strokeColor=#455a64;fontSize=13;" value="حذف منشور من فعالية" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="4844" as="geometry" />
+        </mxCell>
+        <mxCell id="a_search" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#455a64;fontSize=13;" value="البحث عن حساب" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="4993" as="geometry" />
+        </mxCell>
+        <mxCell id="a_view_acc" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#455a64;fontSize=13;" value="استعراض حساب" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="5067" as="geometry" />
+        </mxCell>
+        <mxCell id="n_badge_no" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff59d;strokeColor=#455a64;fontSize=13;" value="إرسال إشعار سحب الشارة" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="5141" as="geometry" />
+        </mxCell>
+        <mxCell id="a_remove" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#455a64;fontSize=13;" value="سحب شارة التوثيق" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="5141" as="geometry" />
+        </mxCell>
+        <mxCell id="n_ban" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff59d;strokeColor=#455a64;fontSize=13;" value="إرسال إشعار حظر الحساب" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="5215" as="geometry" />
+        </mxCell>
+        <mxCell id="a_ban" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#455a64;fontSize=13;" value="حظر حساب" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="5215" as="geometry" />
+        </mxCell>
+        <mxCell id="n_unban" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff59d;strokeColor=#455a64;fontSize=13;" value="إرسال إشعار إلغاء الحظر" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="5289" as="geometry" />
+        </mxCell>
+        <mxCell id="a_unban" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#455a64;fontSize=13;" value="إلغاء حظر حساب" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="5289" as="geometry" />
+        </mxCell>
+        <mxCell id="a_banned" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#455a64;fontSize=13;" value="استعراض الحسابات المحظورة" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="5363" as="geometry" />
+        </mxCell>
+        <mxCell id="a_view_ver" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#455a64;fontSize=13;" value="استعراض طلبات التوثيق" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="5437" as="geometry" />
+        </mxCell>
+        <mxCell id="x_give" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#455a64;fontSize=13;" value="منح شارة التوثيق" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="5474" as="geometry" />
+        </mxCell>
+        <mxCell id="n_ver_ok" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff59d;strokeColor=#455a64;fontSize=13;" value="إرسال إشعار قبول التوثيق" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="5622" as="geometry" />
+        </mxCell>
+        <mxCell id="a_acc_ver" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#455a64;fontSize=13;" value="قبول طلب التوثيق" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="5585" as="geometry" />
+        </mxCell>
+        <mxCell id="x_view_id" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#455a64;fontSize=13;" value="عرض صورة الهوية" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="5696" as="geometry" />
+        </mxCell>
+        <mxCell id="n_ver_no" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff59d;strokeColor=#455a64;fontSize=13;" value="إرسال إشعار رفض التوثيق" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="5770" as="geometry" />
+        </mxCell>
+        <mxCell id="a_rej_ver" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#455a64;fontSize=13;" value="رفض طلب التوثيق" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="5733" as="geometry" />
+        </mxCell>
+        <mxCell id="a_pending" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#455a64;fontSize=13;" value="استعراض الفعاليات المقدّمة" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="5807" as="geometry" />
+        </mxCell>
+        <mxCell id="a_search_ev" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#455a64;fontSize=13;" value="البحث عن فعالية" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="5881" as="geometry" />
+        </mxCell>
+        <mxCell id="n_ev_ok" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff59d;strokeColor=#455a64;fontSize=13;" value="إرسال إشعار قبول الفعالية" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="6029" as="geometry" />
+        </mxCell>
+        <mxCell id="a_acc_ev" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#455a64;fontSize=13;" value="قبول فعالية" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="6029" as="geometry" />
+        </mxCell>
+        <mxCell id="x_ev_detail" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#455a64;fontSize=13;" value="عرض تفاصيل الفعالية" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="6103" as="geometry" />
+        </mxCell>
+        <mxCell id="n_ev_no" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff59d;strokeColor=#455a64;fontSize=13;" value="إرسال إشعار رفض الفعالية" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="6177" as="geometry" />
+        </mxCell>
+        <mxCell id="a_rej_ev" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#455a64;fontSize=13;" value="رفض فعالية" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="6140" as="geometry" />
+        </mxCell>
+        <mxCell id="n_ev_del" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff59d;strokeColor=#455a64;fontSize=13;" value="إرسال إشعار حذف الفعالية" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="6325" as="geometry" />
+        </mxCell>
+        <mxCell id="a_del_ev" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#455a64;fontSize=13;" value="حذف فعالية منشورة" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="6325" as="geometry" />
+        </mxCell>
+        <mxCell id="a_reports" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#455a64;fontSize=13;" value="استعراض البلاغات" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="6399" as="geometry" />
+        </mxCell>
+        <mxCell id="n_rep_del" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff59d;strokeColor=#455a64;fontSize=13;" value="إرسال إشعار حذف المحتوى" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="6547" as="geometry" />
+        </mxCell>
+        <mxCell id="a_del_content" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#455a64;fontSize=13;" value="حذف محتوى مخالف" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="6547" as="geometry" />
+        </mxCell>
+        <mxCell id="x_rep_detail" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#455a64;fontSize=13;" value="عرض تفاصيل البلاغ" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="6621" as="geometry" />
+        </mxCell>
+        <mxCell id="n_rep_no" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff59d;strokeColor=#455a64;fontSize=13;" value="إرسال إشعار رفض البلاغ" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="6695" as="geometry" />
+        </mxCell>
+        <mxCell id="a_dismiss" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#455a64;fontSize=13;" value="تجاهل بلاغ" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="6658" as="geometry" />
+        </mxCell>
+        <mxCell id="as1" edge="1" parent="1" source="ext_ai" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="ai_suggest">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as2" edge="1" parent="1" source="ext_map" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="map_page">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as3" edge="1" parent="1" source="ext_map" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="ai_loc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as4" edge="1" parent="1" source="ext_map" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="loc_detail">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as5" edge="1" parent="1" source="ext_map" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="pick_map">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as6" edge="1" parent="1" source="ext_map" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="ev_loc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as7" edge="1" parent="1" source="ext_map" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="ev_map">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as8" edge="1" parent="1" source="ext_map" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="e_loc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as9" edge="1" parent="1" source="visitor" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="home">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as10" edge="1" parent="1" source="visitor" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="search">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as11" edge="1" parent="1" source="visitor" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="map_page">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as12" edge="1" parent="1" source="visitor" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="loc_detail">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as13" edge="1" parent="1" source="visitor" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="ai">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as14" edge="1" parent="1" source="visitor" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="events">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as15" edge="1" parent="1" source="visitor" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="ev_detail">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as16" edge="1" parent="1" source="visitor" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="view_photo">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as17" edge="1" parent="1" source="visitor" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="view_end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as18" edge="1" parent="1" source="visitor" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="view">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as19" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="save">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as21" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="chat">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as22" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="view_chats">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as25" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="register">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as26" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="profile">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as27" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="view_saved">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as28" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="unsave">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as29" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="view_inv">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as30" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="notif">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as31" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="acc_inv">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as32" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="rej_inv">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as33" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="verify">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as34" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="endorse">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as35" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="view_end_req">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as38" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="del_end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as39" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="add_photo">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as40" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="del_photo">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as41" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="add_link">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as42" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="del_link">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as43" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="set_loc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as44" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="edit_loc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as47" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="edit_sec">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as48" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="del_sec">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as49" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="leave_sec">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as50" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="invite">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as51" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="rm_member">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as52" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="logout">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as53" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="login">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as54" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="del_acc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as55" edge="1" parent="1" source="verified" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="my_ev">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as56" edge="1" parent="1" source="verified" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="new_ev">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as57" edge="1" parent="1" source="verified" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="edit_ev">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as58" edge="1" parent="1" source="verified" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="del_ev">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as59" edge="1" parent="1" source="verified" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="del_post">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as60" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="login">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as61" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="logout">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as62" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="a_search">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as63" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="a_view_acc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as64" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="a_remove">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as65" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="a_ban">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as66" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="a_unban">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as67" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="a_banned">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as68" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="a_view_ver">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as71" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="a_pending">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as72" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="a_search_ev">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as75" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="a_del_ev">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="as76" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="a_reports">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r79" edge="1" parent="1" source="f_city" style="endArrow=open;dashed=1;html=1;strokeColor=#e65100;fontColor=#e65100;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="search" value="«extend»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r80" edge="1" parent="1" source="f_job" style="endArrow=open;dashed=1;html=1;strokeColor=#e65100;fontColor=#e65100;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="search" value="«extend»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r82" edge="1" parent="1" source="ai" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="ai_loc" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r83" edge="1" parent="1" source="ai" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="ai_suggest" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r84" edge="1" parent="1" source="view_end" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="end_gal" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r85" edge="1" parent="1" source="ev_search" style="endArrow=open;dashed=1;html=1;strokeColor=#e65100;fontColor=#e65100;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="events" value="«extend»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r86" edge="1" parent="1" source="ev_fcity" style="endArrow=open;dashed=1;html=1;strokeColor=#e65100;fontColor=#e65100;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="events" value="«extend»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r87" edge="1" parent="1" source="ev_map" style="endArrow=open;dashed=1;html=1;strokeColor=#e65100;fontColor=#e65100;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="ev_detail" value="«extend»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r106" edge="1" parent="1" source="attach" style="endArrow=open;dashed=1;html=1;strokeColor=#e65100;fontColor=#e65100;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="chat" value="«extend»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r107" edge="1" parent="1" source="chat" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="n_msg" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r111" edge="1" parent="1" source="endorse" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="n_end_req" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r114" edge="1" parent="1" source="acc_end" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="n_end_ok" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r116" edge="1" parent="1" source="rej_end" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="n_end_no" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r121" edge="1" parent="1" source="set_loc" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="pick_map" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r132" edge="1" parent="1" source="e_post" style="endArrow=open;dashed=1;html=1;strokeColor=#e65100;fontColor=#e65100;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="edit_ev" value="«extend»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r133" edge="1" parent="1" source="e_loc" style="endArrow=open;dashed=1;html=1;strokeColor=#e65100;fontColor=#e65100;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="edit_ev" value="«extend»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r134" edge="1" parent="1" source="invite" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="find_member" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r135" edge="1" parent="1" source="invite" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="n_inv" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r140" edge="1" parent="1" source="new_ev" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="ev_photos" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r141" edge="1" parent="1" source="new_ev" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="ev_loc" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r142" edge="1" parent="1" source="a_acc_ver" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="x_give" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r143" edge="1" parent="1" source="a_acc_ver" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="n_ver_ok" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r144" edge="1" parent="1" source="reset_pw" style="endArrow=open;dashed=1;html=1;strokeColor=#e65100;fontColor=#e65100;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="login" value="«extend»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r146" edge="1" parent="1" source="a_rej_ver" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="n_ver_no" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r149" edge="1" parent="1" source="a_dismiss" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="n_rep_no" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r151" edge="1" parent="1" source="a_rej_ev" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="n_ev_no" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r152" edge="1" parent="1" source="acc_inv" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="n_inv_ok" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r153" edge="1" parent="1" source="rej_inv" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="n_inv_no" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r154" edge="1" parent="1" source="rm_member" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="n_rm" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r155" edge="1" parent="1" source="del_end" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="n_end_del" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r156" edge="1" parent="1" source="del_sec" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="n_del_sec" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r157" edge="1" parent="1" source="leave_sec" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="n_leave_sec" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r158" edge="1" parent="1" source="a_remove" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="n_badge_no" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r159" edge="1" parent="1" source="a_ban" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="n_ban" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r160" edge="1" parent="1" source="a_unban" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="n_unban" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r161" edge="1" parent="1" source="a_del_content" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="n_rep_del" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r162" edge="1" parent="1" source="a_acc_ev" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="n_ev_ok" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r163" edge="1" parent="1" source="a_del_ev" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="n_ev_del" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r164" edge="1" parent="1" source="edit_loc" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="pick_map" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gen" edge="1" parent="1" source="user" style="endArrow=block;endFill=0;endSize=14;html=1;strokeWidth=1.5;" target="visitor">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gen2" edge="1" parent="1" source="verified" style="endArrow=block;endFill=0;endSize=14;html=1;strokeWidth=1.5;" target="user">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a_published" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#455a64;fontSize=13;" value="استعراض الفعاليات المنشورة" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="6251" as="geometry" />
+        </mxCell>
+        <mxCell id="u1" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="a_published">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u4" edge="1" parent="1" source="a_del_ev" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="x_ev_detail" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="reset_link" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#455a64;fontSize=13;" value="إرسال رابط استعادة كلمة المرور" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="4266" as="geometry" />
+        </mxCell>
+        <mxCell id="u6" edge="1" parent="1" source="reset_pw" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="reset_link" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="page_map" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#455a64;fontSize=13;" value="عرض موقع الصفحة على الخريطة" vertex="1">
+          <mxGeometry height="54" width="250" x="955" y="1011" as="geometry" />
+        </mxCell>
+        <mxCell id="u16" edge="1" parent="1" source="page_map" style="endArrow=open;dashed=1;html=1;strokeColor=#e65100;fontColor=#e65100;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="view" value="«extend»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u17" edge="1" parent="1" source="ext_map" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="page_map">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a_handle_rep" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#455a64;fontSize=13;fontStyle=2;" value="معالجة بلاغ&#10;{abstract}" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="6473" as="geometry" />
+        </mxCell>
+        <mxCell id="u1001" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="a_handle_rep">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u1002" edge="1" parent="1" source="a_handle_rep" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="x_rep_detail" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u1003" edge="1" parent="1" source="a_del_content" style="endArrow=block;endFill=0;endSize=14;html=1;strokeWidth=1.5;rounded=0;strokeColor=#263238;exitX=0;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;" target="a_handle_rep">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="343" y="6574" />
+              <mxPoint x="343" y="6500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u1004" edge="1" parent="1" source="a_dismiss" style="endArrow=block;endFill=0;endSize=14;html=1;strokeWidth=1.5;rounded=0;strokeColor=#263238;exitX=0;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;" target="a_handle_rep">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="333" y="6685" />
+              <mxPoint x="333" y="6500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a_review_ev" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#455a64;fontSize=13;fontStyle=2;" value="مراجعة فعالية مقدّمة&#10;{abstract}" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="5955" as="geometry" />
+        </mxCell>
+        <mxCell id="u1005" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="a_review_ev">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u1006" edge="1" parent="1" source="a_review_ev" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="x_ev_detail" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u1007" edge="1" parent="1" source="a_acc_ev" style="endArrow=block;endFill=0;endSize=14;html=1;strokeWidth=1.5;rounded=0;strokeColor=#263238;exitX=0;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;" target="a_review_ev">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="343" y="6056" />
+              <mxPoint x="343" y="5982" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u1008" edge="1" parent="1" source="a_rej_ev" style="endArrow=block;endFill=0;endSize=14;html=1;strokeWidth=1.5;rounded=0;strokeColor=#263238;exitX=0;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;" target="a_review_ev">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="333" y="6167" />
+              <mxPoint x="333" y="5982" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a_resp_ver" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#455a64;fontSize=13;fontStyle=2;" value="الرد على طلب التوثيق&#10;{abstract}" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="5511" as="geometry" />
+        </mxCell>
+        <mxCell id="u1009" edge="1" parent="1" source="admin" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="a_resp_ver">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u1010" edge="1" parent="1" source="a_resp_ver" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="x_view_id" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u1011" edge="1" parent="1" source="a_acc_ver" style="endArrow=block;endFill=0;endSize=14;html=1;strokeWidth=1.5;rounded=0;strokeColor=#263238;exitX=0;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;" target="a_resp_ver">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="343" y="5612" />
+              <mxPoint x="343" y="5538" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u1012" edge="1" parent="1" source="a_rej_ver" style="endArrow=block;endFill=0;endSize=14;html=1;strokeWidth=1.5;rounded=0;strokeColor=#263238;exitX=0;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;" target="a_resp_ver">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="333" y="5760" />
+              <mxPoint x="333" y="5538" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="new_sec" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;fontStyle=2;" value="إنشاء قسم&#10;{abstract}" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="3452" as="geometry" />
+        </mxCell>
+        <mxCell id="u1013" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="new_sec">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u1015" edge="1" parent="1" source="new_sec_m" style="endArrow=block;endFill=0;endSize=14;html=1;strokeWidth=1.5;rounded=0;strokeColor=#263238;exitX=0;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;" target="new_sec">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="343" y="3553" />
+              <mxPoint x="343" y="3479" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u1016" edge="1" parent="1" source="new_sec_i" style="endArrow=block;endFill=0;endSize=14;html=1;strokeWidth=1.5;rounded=0;strokeColor=#263238;exitX=0;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;" target="new_sec">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="333" y="3627" />
+              <mxPoint x="333" y="3479" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="resp_end" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;fontStyle=2;" value="الرد على طلب تقييم&#10;{abstract}" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="2527" as="geometry" />
+        </mxCell>
+        <mxCell id="u1017" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="resp_end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u1018" edge="1" parent="1" source="resp_end" style="endArrow=open;dashed=1;html=1;strokeColor=#1565c0;fontColor=#1565c0;fontStyle=1;fontSize=12;endSize=12;strokeWidth=2;labelBackgroundColor=#ffffff;" target="req_gal" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u1019" edge="1" parent="1" source="acc_end" style="endArrow=block;endFill=0;endSize=14;html=1;strokeWidth=1.5;rounded=0;strokeColor=#263238;exitX=0;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;" target="resp_end">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="343" y="2628" />
+              <mxPoint x="343" y="2554" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u1020" edge="1" parent="1" source="rej_end" style="endArrow=block;endFill=0;endSize=14;html=1;strokeWidth=1.5;rounded=0;strokeColor=#263238;exitX=0;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;" target="resp_end">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="333" y="2813" />
+              <mxPoint x="333" y="2554" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rep_content" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#455a64;fontSize=13;fontStyle=2;" value="تبليغ عن محتوى&#10;{abstract}" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="1491" as="geometry" />
+        </mxCell>
+        <mxCell id="u1021" edge="1" parent="1" source="user" style="endArrow=none;html=1;strokeColor=#b0bec5;" target="rep_content">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u1023" edge="1" parent="1" source="rep_page" style="endArrow=block;endFill=0;endSize=14;html=1;strokeWidth=1.5;rounded=0;strokeColor=#263238;exitX=0;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;" target="rep_content">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="343" y="1296" />
+              <mxPoint x="343" y="1518" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u1024" edge="1" parent="1" source="rep_ev" style="endArrow=block;endFill=0;endSize=14;html=1;strokeWidth=1.5;rounded=0;strokeColor=#263238;exitX=0;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;" target="rep_content">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="333" y="1592" />
+              <mxPoint x="333" y="1518" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u1025" edge="1" parent="1" source="rep_post" style="endArrow=block;endFill=0;endSize=14;html=1;strokeWidth=1.5;rounded=0;strokeColor=#263238;exitX=0;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;" target="rep_content">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="323" y="1666" />
+              <mxPoint x="323" y="1518" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="search_abs" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#455a64;fontSize=13;fontStyle=2;" value="البحث&#10;{abstract}" vertex="1">
+          <mxGeometry height="54" width="250" x="355" y="271" as="geometry" />
+        </mxCell>
+        <mxCell id="u2001" edge="1" parent="1" source="search" style="endArrow=block;endFill=0;endSize=14;html=1;strokeWidth=1.5;rounded=0;strokeColor=#263238;exitX=0;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;" target="search_abs">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="306" y="224" />
+              <mxPoint x="306" y="298" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u2002" edge="1" parent="1" source="a_search" style="endArrow=block;endFill=0;endSize=14;html=1;strokeWidth=1.5;rounded=0;strokeColor=#263238;exitX=0;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;" target="search_abs">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="306" y="5020" />
+              <mxPoint x="306" y="298" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u2003" edge="1" parent="1" source="a_search_ev" style="endArrow=block;endFill=0;endSize=14;html=1;strokeWidth=1.5;rounded=0;strokeColor=#263238;exitX=0;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;" target="search_abs">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="306" y="5908" />
+              <mxPoint x="306" y="298" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u2004" edge="1" parent="1" source="ev_search" style="endArrow=block;endFill=0;endSize=14;html=1;strokeWidth=1.5;rounded=0;strokeColor=#263238;exitX=1;exitY=0.5;exitPerimeter=0;entryX=1;entryY=0.5;entryPerimeter=0;" target="search_abs">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1228" y="668" />
+              <mxPoint x="1228" y="298" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u2005" edge="1" parent="1" source="find_member" style="endArrow=block;endFill=0;endSize=14;html=1;strokeWidth=1.5;rounded=0;strokeColor=#263238;exitX=1;exitY=0.5;exitPerimeter=0;entryX=1;entryY=0.5;entryPerimeter=0;" target="search_abs">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1228" y="3923" />
+              <mxPoint x="1228" y="298" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
