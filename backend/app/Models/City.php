@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
+class City extends Model
+{
+    // ERD: lookup table without created_at / updated_at.
+    public $timestamps = false;
+
+    protected $fillable = ['name'];
+
+    public function profiles(): HasMany
+    {
+        return $this->hasMany(Profile::class);
+    }
+}
