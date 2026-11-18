@@ -8,9 +8,12 @@ const PASSWORD_HINT = "At least 8 characters, with letters and numbers.";
 
 // Sign up, part 1 (U04 lines 3-5): account fields. The server checks them
 // (POST /auth/register/check) but saves nothing yet.
-export function AccountStep({ account, onChange, onDone }) {
-  const [fieldErrors, setFieldErrors] = useState({});
-  const [formError, setFormError] = useState("");
+// initialErrors: errors sent back by part 2 (line 8a), shown when we come back.
+export function AccountStep({ account, onChange, onDone, initialErrors = {} }) {
+  const [fieldErrors, setFieldErrors] = useState(initialErrors);
+  const [formError, setFormError] = useState(
+    Object.keys(initialErrors).length > 0 ? messageFor("validationFailed") : "",
+  );
   const [sending, setSending] = useState(false);
 
   // Change one field and remove its old error.
