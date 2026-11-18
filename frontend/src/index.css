@@ -410,3 +410,12 @@ a {
 .muted-text {
   color: var(--muted-light);
 }
+/* ---------- 11. Drop-down lists ---------- */
+.select {
+  cursor: pointer;
+}
+.select:disabled {
+  background: #eceeef;
+  color: var(--muted);
+  cursor: not-allowed;
+}
