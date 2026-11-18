@@ -1,122 +1,76 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import { useState } from "react";
+import { readApiError } from "./api/client";
+import { useAuth } from "./auth/useAuth";
+import { messageFor } from "./messages";
 
-function App() {
-  const [count, setCount] = useState(0)
+// Temporary page: tests sign in / sign out with the demo account. We replace it in step 5.
+export default function App() {
+  const { status, user, signIn, signOut } = useAuth();
+  const [error, setError] = useState("");
+
+  async function testSignIn(password) {
+    setError("");
+    try {
+      await signIn("demo_user", password);
+    } catch (err) {
+      setError(messageFor(readApiError(err).code));
+    }
+  }
+
+  async function testSignOut() {
+    setError("");
+    try {
+      await signOut();
+    } catch (err) {
+      setError(messageFor(readApiError(err).code));
+    }
+  }
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
+    <div className="auth-page">
+      <div className="auth-card">
+        <h1 className="auth-title">Auth test</h1>
+        <div className="form">
           <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+            Status: <strong>{status}</strong>
           </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+          {user && (
+            <p>
+              User: {user.username} ({user.role})
+            </p>
+          )}
+          {error && <p className="alert alert-error">{error}</p>}
 
-      <div className="ticks"></div>
+          {status === "guest" && (
+            <>
+              <button
+                className="btn btn-primary btn-block"
+                type="button"
+                onClick={() => testSignIn("password1")}
+              >
+                Sign in as demo_user
+              </button>
+              <button
+                className="btn btn-outline btn-block"
+                type="button"
+                onClick={() => testSignIn("wrong-pass1")}
+              >
+                Sign in with a wrong password
+              </button>
+            </>
+          )}
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+          {status === "signedIn" && (
+            <button
+              className="btn btn-primary btn-block"
+              type="button"
+              onClick={testSignOut}
+            >
+              Sign out
+            </button>
+          )}
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      </div>
+    </div>
+  );
 }
-
-export default App
