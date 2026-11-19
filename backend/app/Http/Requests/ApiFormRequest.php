@@ -37,6 +37,7 @@ abstract class ApiFormRequest extends FormRequest
             'Required' => 'requiredField',
             'Unique' => 'alreadyUsed',
             StrongPassword::class => 'weakPassword',
+            'CurrentPassword' => 'wrongPassword',
             default => 'invalidField',
         };
     }
