@@ -7,6 +7,7 @@ const MESSAGES = {
   weakPassword:
     "Password must be at least 8 characters, with letters and numbers.",
   wrongPassword: "The password is not correct.",
+  passwordsDoNotMatch: "The two passwords are not the same.", // checked in the browser only
   invalidField: "This value is not valid.",
 
   // Whole-request errors
