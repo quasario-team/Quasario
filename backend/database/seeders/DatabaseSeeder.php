@@ -10,6 +10,8 @@ class DatabaseSeeder extends Seeder
     // Fills the local database with demo data. Roles are already inserted by the users migration.
     public function run(): void
     {
+        $this->call(LookupSeeder::class);
+
         User::factory()->admin()->create([
             'username' => 'admin',
             'email' => 'admin@quasario.test',
