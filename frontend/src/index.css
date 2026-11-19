@@ -410,6 +410,7 @@ a {
 .muted-text {
   color: var(--muted-light);
 }
+
 /* ---------- 11. Drop-down lists ---------- */
 .select {
   cursor: pointer;
@@ -418,4 +419,34 @@ a {
   background: #eceeef;
   color: var(--muted);
   cursor: not-allowed;
+}
+
+/* ---------- 12. Home page ---------- */
+.brand-dark {
+  color: var(--yellow);
+}
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--text-light);
+  font-size: 22px;
+  text-decoration: none;
+}
+.icon-link:hover {
+  background: var(--dark-row);
+}
+.home-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  max-width: 320px;
+}
+.home-note {
+  margin-top: 16px;
+  text-align: center;
 }
