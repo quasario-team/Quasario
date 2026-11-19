@@ -2,15 +2,17 @@ import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { readApiError } from "../api/client";
 import { useAuth } from "../auth/useAuth";
+import { DeleteAccountDialog } from "../components/DeleteAccountDialog";
 import { messageFor } from "../messages";
 
-// Settings menu (Figma NEW 46). Phase 1 rows: account, password, log out.
-// "Delete account" is added in step 15.
+// Settings menu (Figma NEW 46). Phase 1 rows: account, password,
+// log out and delete account.
 export function SettingsPage() {
-  const { signOut } = useAuth();
+  const { user, signOut, forgetSession } = useAuth();
   const navigate = useNavigate();
   const [error, setError] = useState("");
   const [leaving, setLeaving] = useState(false);
+  const [askDelete, setAskDelete] = useState(false);
 
   // Use case U21 "Log out".
   async function handleLogOut() {
@@ -27,6 +29,16 @@ export function SettingsPage() {
       setError(messageFor(readApiError(apiError).code));
       setLeaving(false);
     }
+  }
+
+  // Use case U23 "Delete account": Laravel already deleted the account
+  // and its tokens, so we only forget the token in the browser.
+  function handleDeleted() {
+    forgetSession();
+    navigate("/sign-in", {
+      replace: true,
+      state: { notice: "Your account was deleted." },
+    });
   }
 
   return (
@@ -66,7 +78,24 @@ export function SettingsPage() {
         >
           {leaving ? "Logging out..." : "Log out"}
         </button>
+        {/* An admin account cannot be deleted from here (backend: adminNotAllowed). */}
+        {user.role !== "admin" && (
+          <button
+            className="menu-item danger"
+            type="button"
+            onClick={() => setAskDelete(true)}
+          >
+            Delete account
+          </button>
+        )}
       </div>
+
+      {askDelete && (
+        <DeleteAccountDialog
+          onCancel={() => setAskDelete(false)}
+          onDeleted={handleDeleted}
+        />
+      )}
     </div>
   );
 }
