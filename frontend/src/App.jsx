@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import { GuestOnly, RequireAdmin, RequireAuth } from "./auth/guards";
 import { AccountSettingsPage } from "./pages/AccountSettingsPage";
-import { ComingSoonPage } from "./pages/ComingSoonPage";
+import { AdminDashboardPage } from "./pages/AdminDashboardPage";
+import { ChangePasswordPage } from "./pages/ChangePasswordPage";
 import { ForgotPasswordPage } from "./pages/ForgotPasswordPage";
 import { HomePage } from "./pages/HomePage";
 import { NotFoundPage } from "./pages/NotFoundPage";
@@ -11,7 +12,7 @@ import { SignInPage } from "./pages/SignInPage";
 import { SignUpPage } from "./pages/SignUpPage";
 
 // The map of the site: every address and the page it shows.
-// Each ComingSoonPage is replaced by the real page in its own step.
+// Phase 1: every page is real now (no more ComingSoonPage).
 export default function App() {
   return (
     <Routes>
@@ -31,18 +32,12 @@ export default function App() {
       <Route element={<RequireAuth />}>
         <Route path="/settings" element={<SettingsPage />} />
         <Route path="/settings/account" element={<AccountSettingsPage />} />
-        <Route
-          path="/settings/password"
-          element={<ComingSoonPage title="Change password" />}
-        />
+        <Route path="/settings/password" element={<ChangePasswordPage />} />
       </Route>
 
       {/* Admin only */}
       <Route element={<RequireAdmin />}>
-        <Route
-          path="/admin"
-          element={<ComingSoonPage title="Admin dashboard" />}
-        />
+        <Route path="/admin" element={<AdminDashboardPage />} />
       </Route>
 
       <Route path="*" element={<NotFoundPage />} />

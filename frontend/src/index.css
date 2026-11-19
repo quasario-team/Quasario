@@ -450,3 +450,21 @@ a {
   margin-top: 16px;
   text-align: center;
 }
+
+/* ---------- 13. Delete account dialog ---------- */
+/* The dialog is light, so its texts go back to the dark colors. */
+.dialog .label {
+  color: var(--text);
+}
+.dialog .field-hint {
+  color: var(--muted);
+}
+.dialog .alert-error {
+  color: #b33a3a;
+}
+.dialog .btn-outline {
+  color: var(--text);
+}
+.btn-danger:hover:not(:disabled) {
+  background: #e04f4f;
+}
