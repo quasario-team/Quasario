@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { GuestOnly, RequireAdmin, RequireAuth } from "./auth/guards";
 import { ComingSoonPage } from "./pages/ComingSoonPage";
+import { HomePage } from "./pages/HomePage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { SignInPage } from "./pages/SignInPage";
 import { SignUpPage } from "./pages/SignUpPage";
@@ -11,7 +12,7 @@ export default function App() {
   return (
     <Routes>
       {/* Everyone */}
-      <Route path="/" element={<ComingSoonPage title="Home" />} />
+      <Route path="/" element={<HomePage />} />
       {/* The email link opens this page, so it works signed in or not. */}
       <Route
         path="/reset-password"
