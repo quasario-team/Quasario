@@ -5,14 +5,17 @@ import { AdminDashboardPage } from "./pages/AdminDashboardPage";
 import { ChangePasswordPage } from "./pages/ChangePasswordPage";
 import { ForgotPasswordPage } from "./pages/ForgotPasswordPage";
 import { HomePage } from "./pages/HomePage";
+import { MyProfilesPage } from "./pages/MyProfilesPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
+import { OnboardingPage } from "./pages/OnboardingPage";
+import { ProfileFormPage } from "./pages/ProfileFormPage";
 import { ResetPasswordPage } from "./pages/ResetPasswordPage";
 import { SettingsPage } from "./pages/SettingsPage";
 import { SignInPage } from "./pages/SignInPage";
 import { SignUpPage } from "./pages/SignUpPage";
 
 // The map of the site: every address and the page it shows.
-// Phase 1: every page is real now (no more ComingSoonPage).
+// Phase 2 adds the profile pages.
 export default function App() {
   return (
     <Routes>
@@ -33,6 +36,10 @@ export default function App() {
         <Route path="/settings" element={<SettingsPage />} />
         <Route path="/settings/account" element={<AccountSettingsPage />} />
         <Route path="/settings/password" element={<ChangePasswordPage />} />
+        <Route path="/profiles" element={<MyProfilesPage />} />
+        <Route path="/profiles/new" element={<ProfileFormPage />} />
+        <Route path="/profiles/:id/edit" element={<ProfileFormPage />} />
+        <Route path="/onboarding" element={<OnboardingPage />} />
       </Route>
 
       {/* Admin only */}

@@ -12,6 +12,11 @@ export default defineConfig({
         target: "http://127.0.0.1:8000",
         changeOrigin: true,
       },
+      // Phase 2: the uploaded pictures (/storage/profiles/...) also live in Laravel.
+      "/storage": {
+        target: "http://127.0.0.1:8000",
+        changeOrigin: true,
+      },
     },
   },
 });

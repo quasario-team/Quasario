@@ -2,7 +2,7 @@ import { Navigate, NavLink } from "react-router-dom";
 import { LoadingScreen } from "../components/LoadingScreen";
 import { useAuth } from "../auth/useAuth";
 
-// Temporary home page (phase 1). The real home (search, categories ...)
+// Temporary home page (phases 1 and 2). The real home (search, categories ...)
 // comes in a later phase. Narrative U22: after sign in the user sees
 // the name of the active profile.
 export function HomePage() {
@@ -52,6 +52,32 @@ export function HomePage() {
           <p className="muted-text">You have no profile yet.</p>
         )}
       </section>
+
+      {/* Onboarding: the active profile has no photo and no bio yet. */}
+      {activeProfile && !activeProfile.profile_image && !activeProfile.bio && (
+        <section className="panel">
+          <h2>Complete your profile</h2>
+          <p className="muted-text">
+            Add a photo and a few words about your work.
+          </p>
+          <div className="dialog-actions">
+            <span />
+            <NavLink className="btn btn-primary" to="/onboarding">
+              Start
+            </NavLink>
+          </div>
+        </section>
+      )}
+
+      {/* Phase 2: the user switches and manages profiles there. */}
+      {activeProfile && (
+        <>
+          <div className="menu-gap" />
+          <NavLink className="btn btn-outline btn-block" to="/profiles">
+            Switch profile
+          </NavLink>
+        </>
+      )}
 
       <p className="muted-text home-note">
         More pages come in the next phases.
