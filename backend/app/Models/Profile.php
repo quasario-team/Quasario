@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Profile extends Model
 {
@@ -42,5 +44,23 @@ class Profile extends Model
     public function city(): BelongsTo
     {
         return $this->belongsTo(City::class);
+    }
+
+    // Phase 2, feature 6: contact links (one per platform).
+    public function socialLinks(): HasMany
+    {
+        return $this->hasMany(SocialLink::class);
+    }
+
+    // Phase 2, feature 7: the work gallery.
+    public function galleryImages(): HasMany
+    {
+        return $this->hasMany(GalleryImage::class);
+    }
+
+    // Phase 2, feature 8: the place of work (one or none).
+    public function location(): HasOne
+    {
+        return $this->hasOne(ProfileLocation::class);
     }
 }

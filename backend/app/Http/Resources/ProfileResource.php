@@ -21,8 +21,10 @@ class ProfileResource extends JsonResource
                 ],
             ],
             'city' => ['id' => $this->city->id, 'name' => $this->city->name],
-            'profile_image' => $this->profile_image,
-            'cover_image' => $this->cover_image,
+            // The database keeps only the file path (profiles/7/abc.png);
+            // the browser needs the address: /storage/profiles/7/abc.png
+            'profile_image' => $this->profile_image ? '/storage/' . $this->profile_image : null,
+            'cover_image' => $this->cover_image ? '/storage/' . $this->cover_image : null,
             'bio' => $this->bio,
             'study' => $this->study,
             'experience' => $this->experience,
