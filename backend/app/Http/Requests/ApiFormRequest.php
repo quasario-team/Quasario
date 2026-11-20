@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\PlatformUrl;
 use App\Rules\StrongPassword;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
@@ -34,9 +35,12 @@ abstract class ApiFormRequest extends FormRequest
     private function errorCodeFor(string $rule): string
     {
         return match ($rule) {
-            'Required' => 'requiredField',
+            // RequiredWith: e.g. job_title_id sent without job_category_id.
+            // RequiredWithout: e.g. no profile_image and no cover_image.
+            'Required', 'RequiredWith', 'RequiredWithout' => 'requiredField',
             'Unique' => 'alreadyUsed',
             StrongPassword::class => 'weakPassword',
+            PlatformUrl::class => 'wrongPlatformUrl',
             'CurrentPassword' => 'wrongPassword',
             default => 'invalidField',
         };
