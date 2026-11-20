@@ -71,6 +71,17 @@ export function AuthProvider({ children }) {
     setSession((current) => ({ ...current, user }));
   }, []);
 
+  // Phase 2: ask Laravel again "who am I?", e.g. after a profile was
+  // deleted, so the home page shows the profile that is active now.
+  const refreshMe = useCallback(async () => {
+    const me = await authApi.getMe();
+    setSession((current) => ({
+      ...current,
+      user: me.user,
+      activeProfile: me.active_profile,
+    }));
+  }, []);
+
   const value = useMemo(
     () => ({
       ...session,
@@ -79,8 +90,17 @@ export function AuthProvider({ children }) {
       signOut,
       forgetSession,
       updateUser,
+      refreshMe,
     }),
-    [session, endedReason, signIn, signOut, forgetSession, updateUser],
+    [
+      session,
+      endedReason,
+      signIn,
+      signOut,
+      forgetSession,
+      updateUser,
+      refreshMe,
+    ],
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

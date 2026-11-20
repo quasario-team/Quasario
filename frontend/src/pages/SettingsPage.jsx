@@ -5,8 +5,8 @@ import { useAuth } from "../auth/useAuth";
 import { DeleteAccountDialog } from "../components/DeleteAccountDialog";
 import { messageFor } from "../messages";
 
-// Settings menu (Figma NEW 46). Phase 1 rows: account, password,
-// log out and delete account.
+// Settings menu (Figma NEW 46). Rows: my profiles (phase 2), account,
+// password, log out and delete account.
 export function SettingsPage() {
   const { user, signOut, forgetSession } = useAuth();
   const navigate = useNavigate();
@@ -59,6 +59,12 @@ export function SettingsPage() {
       {error && <p className="alert alert-error">{error}</p>}
 
       <nav className="menu">
+        {/* An admin has no profiles. */}
+        {user.role !== "admin" && (
+          <NavLink className="menu-item" to="/profiles">
+            My profiles <span aria-hidden="true">›</span>
+          </NavLink>
+        )}
         <NavLink className="menu-item" to="/settings/account">
           Account <span aria-hidden="true">›</span>
         </NavLink>
